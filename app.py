@@ -42,7 +42,7 @@ def delete_item(item_id):
     item = items.pop(item_id, None)
     if not item:
         return jsonify({'error': 'Item not found'}), 404
-    return jsonify({'message': 'Item deleted successfully'}), 200
+    return jsonify({'message': 'Items deleted successfully'}), 200
 
 @app.route('/health', methods=['GET'])
 def health():

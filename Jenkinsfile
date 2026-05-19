@@ -42,8 +42,8 @@ pipeline {
         stage('Health Check') {
             steps {
                 echo '❤️ Health check kar raha hoon...'
-                sh 'sleep 3'
-                sh 'curl -f http://localhost:${PORT}/health || exit 1'
+                sh 'sleep 5'
+                sh 'curl -f http://172.17.0.1:5000/health || exit 1'
             }
         }
     }
